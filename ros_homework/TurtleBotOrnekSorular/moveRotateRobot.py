@@ -10,8 +10,10 @@ def callback(dt):
     print ('Range data at 15 deg:  {}'.format(dt.ranges[15]))
     print ('Range data at 345 deg: {}'.format(dt.ranges[345]))
     print ('-------------------------------------------')
+
     thr1 = 0.8 
     thr2 = 0.8
+   
     if dt.ranges[0]>thr1 and dt.ranges[15]>thr2 and dt.ranges[345]>thr2: 
         move.linear.x = 0.5 
         move.angular.z = 0.0 

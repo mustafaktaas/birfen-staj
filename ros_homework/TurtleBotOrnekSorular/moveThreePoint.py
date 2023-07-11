@@ -33,7 +33,7 @@ def move_to_goal(xGoal, yGoal):
    rospy.loginfo("Hedef konuma gidiliyor...")
    ac.send_goal(goal)
 
-   ac.wait_for_result(rospy.Duration(60))
+   ac.wait_for_result(rospy.Duration(5))
 
    if ac.get_state() == GoalStatus.SUCCEEDED:
        rospy.loginfo("Hedefe ulaşıldı")
